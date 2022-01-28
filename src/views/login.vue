@@ -4,7 +4,6 @@ import { useRouter } from "vue-router";
 import { initRouter } from "/@/router/utils";
 import { storageSession } from "/@/utils/storage";
 import { addClass, removeClass } from "/@/utils/operate";
-import bg from "/@/assets/login/bg.png";
 import avatar from "/@/assets/login/avatar.svg?component";
 import illustration0 from "/@/assets/login/illustration0.svg?component";
 import illustration1 from "/@/assets/login/illustration1.svg?component";
@@ -70,14 +69,9 @@ function onPwdBlur() {
 </script>
 
 <template>
-  <img :src="bg" class="wave" />
   <div class="login-container">
-    <div class="img">
-      <component :is="currentWeek"></component>
-    </div>
     <div class="login-box">
       <div class="login-form">
-        <avatar class="avatar" />
         <h2
           v-motion
           :initial="{
@@ -92,7 +86,7 @@ function onPwdBlur() {
             }
           }"
         >
-          Pure Admin
+          DOGGER PLATFORM
         </h2>
         <div
           class="input-group user focus"
@@ -113,7 +107,7 @@ function onPwdBlur() {
             <i class="fa fa-user"></i>
           </div>
           <div>
-            <h5>用户名</h5>
+            <h5>Username or Email Address</h5>
             <input
               type="text"
               class="input"
@@ -142,7 +136,7 @@ function onPwdBlur() {
             <i class="fa fa-lock"></i>
           </div>
           <div>
-            <h5>密码</h5>
+            <h5>Password</h5>
             <input
               type="password"
               class="input"
